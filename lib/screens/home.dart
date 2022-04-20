@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import '../widgets/nearest_card.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({ Key? key }) : super(key: key);
@@ -34,16 +35,16 @@ class MyHomePage extends StatelessWidget {
                               blurRadius: 35,                              
                               offset: Offset(0,20),
                               color: Colors.grey,
-                            )
-                          ]
-                        ),                      
+                            ),
+                          ],
+                        ),
                       child: IconButton(
                         onPressed: () {  }, 
                         icon: const Icon(Icons.notification_add_outlined),
                         iconSize: 30,
                         color:HexColor('#15BE77'),
-                      ), 
-                      ),                                   
+                      ),
+                      ),
                     ],
                   ),
                 ), 
@@ -127,19 +128,42 @@ class MyHomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Image(image: AssetImage("assets/vegi.png"),
-                            width: 200,),
-                            Text("Vegan Resto",
-                            style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),
-                            ),
-                            Text("12 Min"),
-                          ],
-                        ),
+                    SizedBox(
+                      height: 200,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          nearest_card(
+                            vegiName: "Vegan Resto",
+                            image: "assets/slid1.png",
+                            time: 12,
+                          ),
+                          nearest_card(
+                            vegiName: "Healthy Food", 
+                            image: "assets/slid2.png",
+                            time: 8,
+                          ),
+                          nearest_card(
+                            vegiName: "Good Food", 
+                            image: "assets/slid3.png",
+                            time: 10,
+                          ),
+                          nearest_card(
+                            vegiName: "Smart Resto", 
+                            image: "assets/slid4.png",
+                            time: 6,
+                          ),
+                          nearest_card(
+                            vegiName: "Vegan Resto", 
+                            image: "assets/slid5.png",
+                            time: 14,
+                          ),
+                          nearest_card(
+                            vegiName: "Health Food", 
+                            image: "assets/slid6.png",
+                            time: 10,
+                          ),
+                        ],
                       ),
                     )
                   ],
