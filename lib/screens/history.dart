@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, non_constant_identifier_names
 
+import 'package:find_food_application/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,22 +22,22 @@ class _historyState extends State<history> {
   loadData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      saveListTitle = prefs.getStringList('saveTitleKey') ?? [];
-      saveListDate = prefs.getStringList('saveDateKey') ?? [];
-      recentTitle = prefs.getStringList('recentTitleKey') ?? [];
-      recentDate = prefs.getStringList('recentDateKey') ?? [];
+      // saveListTitle = prefs.getStringList('saveTitleKey') ?? [];
+      // saveListDate = prefs.getStringList('saveDateKey') ?? [];
+      // recentTitle = prefs.getStringList('recentTitleKey') ?? [];
+      // recentDate = prefs.getStringList('recentDateKey') ?? [];
     });
   }
 
   getContact() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      title = prefs.getStringList('titleKey') ?? [];
-      subtitle = prefs.getStringList('subtitleKey') ?? [];
-      icon = prefs.getStringList('iconKey') ?? [];
-      bgColor = prefs.getStringList('bgColorKey') ?? [];
-      iconColor = prefs.getStringList('colorKey') ?? [];
-      dateSubmit = prefs.getStringList('dateKey') ?? [];
+      // title = prefs.getStringList('titleKey') ?? [];
+      // subtitle = prefs.getStringList('subtitleKey') ?? [];
+      // icon = prefs.getStringList('iconKey') ?? [];
+      // bgColor = prefs.getStringList('bgColorKey') ?? [];
+      // iconColor = prefs.getStringList('colorKey') ?? [];
+      // dateSubmit = prefs.getStringList('dateKey') ?? [];
     });
   }
 
