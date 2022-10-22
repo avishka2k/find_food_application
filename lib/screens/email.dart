@@ -1,16 +1,8 @@
 // ignore_for_file: camel_case_types, prefer_final_fields
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:qr_scanner/imageResult/email_image.dart';
-import 'package:qr_scanner/theme.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // ignore: must_be_immutable, use_key_in_widget_constructors
 class qr_email extends StatelessWidget {
-  TextEditingController _email = TextEditingController();
-  TextEditingController _subject = TextEditingController();
-  TextEditingController _body = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,12 +88,6 @@ class qr_email extends StatelessWidget {
                         TextField(
                           controller: _email,
                           style: GoogleFonts.comfortaa(fontSize: 20),
-                          decoration: const InputDecoration(
-                            hintStyle: TextStyle(fontSize: 18),
-                            border: InputBorder.none,
-                            hintText: 'Email',
-                            contentPadding: EdgeInsets.only(left: 20),
-                          ),
                         ),
                       ],
                     ),
@@ -141,12 +127,6 @@ class qr_email extends StatelessWidget {
                           controller: _body,
                           maxLines: 8,
                           style: GoogleFonts.comfortaa(fontSize: 20),
-                          decoration: const InputDecoration(
-                            hintStyle: TextStyle(fontSize: 18),
-                            border: InputBorder.none,
-                            hintText: 'Body',
-                            contentPadding: EdgeInsets.only(left: 20),
-                          ),
                         ),
                       ],
                     ),
