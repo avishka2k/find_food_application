@@ -40,6 +40,7 @@ class _historyState extends State<history> {
       // dateSubmit = prefs.getStringList('dateKey') ?? [];
     });
   }
+  bool saveListTitle = true;
 
   @override
   Widget build(BuildContext context) {
@@ -70,8 +71,6 @@ class _historyState extends State<history> {
                         elevation: 1,
                         child: TabBar(
                           labelColor: Colors.white,
-                          labelStyle: GoogleFonts.comfortaa(
-                              textStyle: myTextStyle.cardStyle),
                           unselectedLabelColor:
                               AppColors.primaryColor.withOpacity(0.6),
                           padding: const EdgeInsets.all(3),
@@ -93,55 +92,21 @@ class _historyState extends State<history> {
                     child: TabBarView(
                       children: [
                         ListView.builder(
-                            itemCount: recentDate.length,
+                           // itemCount: recentDate.length,
                             itemBuilder: (BuildContext context, int index) {
-                              return historyCard(
-                                iconColor: Colors.deepPurple,
-                                shareData: recentTitle[index],
-                                icon: 'qr-code',
-                                subtitle: recentTitle[index],
-                                dateTime: recentDate[index],
-                                bgColor:
-                                    Colors.deepPurple.shade200.withOpacity(0.4),
-                              );
+                              return history();
                             }),
                         ListView.builder(
-                            itemCount: title.length,
+                           // itemCount: title.length,
                             itemBuilder: (BuildContext context, int index) {
-                              return scanListCard(
-                                title: title[index],
-                                subtitle: subtitle[index],
-                                dateTime: dateSubmit[index],
-                                icon: icon[index],
-                                shareData: 'shareData',
-                                bgColor: Colors.blue,
-                                iconColor: Colors.red,
-                              );
+                              return history();
                             }),
-                        // ListView(
-                        //   scrollDirection: Axis.vertical,
-                        //   shrinkWrap: true,
-                        //   children: const <Widget>[
-                        //     Text("data")
-                        //     // saveTitle == null
-                        //     //     ? const Text('no item')
-                        //     //     : Text(saveTitle!),
-                        //   ],
-                        // ),
                         saveListTitle == null
                             ? Text('sad')
                             : ListView.builder(
-                                itemCount: saveListDate.length,
+                                //itemCount: saveListDate.length,
                                 itemBuilder: (BuildContext context, int index) {
-                                  return historyCard(
-                                    iconColor: Colors.red,
-                                    bgColor:
-                                        Colors.red.shade200.withOpacity(0.4),
-                                    shareData: saveListTitle[index],
-                                    icon: 'star2',
-                                    subtitle: saveListTitle[index],
-                                    dateTime: saveListDate[index],
-                                  );
+                                  return history();
                                 },
                               ),
                       ],
