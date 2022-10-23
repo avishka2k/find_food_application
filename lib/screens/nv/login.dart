@@ -80,19 +80,7 @@ class _loginState extends State<login> {
                     const Image(
                       image: AssetImage('assets/Logo.png'),
                     ),
-                    SizedBox(height: 25.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 25.w),
-                      child: Text(
-                        'Login To Your Account',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 25.sp,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
+                    
                     SizedBox(height: 20.h),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 18.w),
@@ -209,34 +197,7 @@ class _loginState extends State<login> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 25, top: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => forgotPassword(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              'Forgot your Password?',
-                              style: TextStyle(
-                                fontSize: 12.sp,
-                                color: HexColor('#15BE77'),
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20.h),
-                    // ignore: deprecated_membe
+                    
                         ],
                       ),
                     )
