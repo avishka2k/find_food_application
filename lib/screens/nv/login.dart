@@ -234,44 +234,7 @@ class _loginState extends State<login> {
                               ],
                             ),
                           ),
-                          SizedBox(width: 10.w),
-                          Container(
-                            width: 120.w,
-                            height: 40.h,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Colors.grey.withOpacity(0.4),
-                                  width: 0.2.w),
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 70,
-                                  offset: const Offset(2, 20),
-                                  color: HexColor('#15BE77').withOpacity(0.2),
-                                )
-                              ],
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image(
-                                  image: const AssetImage(
-                                    'assets/icons/google.png',
-                                  ),
-                                  width: 25.w,
-                                ),
-                                SizedBox(width: 8.w),
-                                Text(
-                                  'Google',
-                                  style: TextStyle(
-                                    fontSize: 13.sp,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+                          
                         ],
                       ),
                     )
