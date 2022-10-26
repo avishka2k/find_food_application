@@ -92,30 +92,7 @@ class _LogingPageState extends State<LogingPage> {
                   height: 10,
                 ),
 
-                //password textfield
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: TextField(
-                    obscureText: true,
-                    controller: _passwordController,
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.green),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      hintText: "Password",
-                      fillColor: Colors.grey[200],
-                      filled: true,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
+                
 
                 //forgot password
                 Padding(
