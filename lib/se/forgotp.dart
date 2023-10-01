@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:find_food_application/widgets/custom_textformfield.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -128,58 +129,18 @@ class _forgotPasswordState extends State<forgotPassword> {
                   child: Column(
                     children: [
                       SizedBox(height: 50.h),
-                      Container(
-                        decoration: BoxDecoration(boxShadow: [
-                          BoxShadow(
-                            blurRadius: 100,
-                            offset: const Offset(0, 20),
-                            color: HexColor('#15BE77').withOpacity(0.1),
-                          )
-                        ]),
-                        child: TextFormField(
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Cant\'t be empty';
-                            } else if (EmailValidator.validate(
-                                    _emailControllar.text) ==
-                                false) {
-                              return 'Invalid Email Address';
-                            }
-                            return null;
-                          },
-                          controller: _emailControllar,
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  width: 0.2.w,
-                                  color: Colors.grey.withOpacity(0.5),
-                                ),
-                                borderRadius: BorderRadius.circular(15)),
-                            hintText: 'example@gmail.com',
-                            labelText: 'Email',
-                            labelStyle: const TextStyle(
-                              color: Colors.grey,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: HexColor('#15BE77'),
-                                ),
-                                borderRadius: BorderRadius.circular(15)),
-                            focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: HexColor('#15BE77'),
-                                ),
-                                borderRadius: BorderRadius.circular(15)),
-                            errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  width: 0.2.w,
-                                  color: Colors.red,
-                                ),
-                                borderRadius: BorderRadius.circular(15)),
-                          ),
-                        ),
+                      CustomTextFormField(
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'Cant\'t be empty';
+                          } else if (EmailValidator.validate(
+                                  _emailControllar.text) ==
+                              false) {
+                            return 'Invalid Email Address';
+                          }
+                          return null;
+                        },
+                        controller: _emailControllar,
                       ),
                       SizedBox(height: 50.h),
                       // ignore: deprecated_member_use

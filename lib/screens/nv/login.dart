@@ -80,7 +80,6 @@ class _loginState extends State<login> {
                     const Image(
                       image: AssetImage('assets/Logo.png'),
                     ),
-                    
                     SizedBox(height: 20.h),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 18.w),
@@ -88,61 +87,7 @@ class _loginState extends State<login> {
                         key: _formKey,
                         child: Column(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 100,
-                                  offset: const Offset(0, 20),
-                                  color: HexColor('#15BE77').withOpacity(0.1),
-                                )
-                              ]),
-                              child: TextFormField(
-                                keyboardType: TextInputType.emailAddress,
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Cant\'t be empty';
-                                  } else if (EmailValidator.validate(
-                                          _emailControllar.text) ==
-                                      false) {
-                                    return 'Invalid Email Address';
-                                  }
-                                  return null;
-                                },
-                                controller: _emailControllar,
-                                decoration: InputDecoration(
-                                  filled: true,
-                                  fillColor: Colors.white,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        width: 0.2.w,
-                                        color: Colors.grey.withOpacity(0.5),
-                                      ),
-                                      borderRadius: BorderRadius.circular(15)),
-                                  hintText: 'example@gmail.com',
-                                  labelText: 'Email',
-                                  labelStyle: const TextStyle(
-                                    color: Colors.grey,
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: HexColor('#15BE77'),
-                                      ),
-                                      borderRadius: BorderRadius.circular(15)),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: HexColor('#15BE77'),
-                                      ),
-                                      borderRadius: BorderRadius.circular(15)),
-                                  errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        width: 0.2.w,
-                                        color: Colors.red,
-                                      ),
-                                      borderRadius: BorderRadius.circular(15)),
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 15.h),                          
+                            SizedBox(height: 15.h),
                           ],
                         ),
                       ),
@@ -234,7 +179,6 @@ class _loginState extends State<login> {
                               ],
                             ),
                           ),
-                          
                         ],
                       ),
                     )
