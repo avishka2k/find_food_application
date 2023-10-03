@@ -32,6 +32,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   hexcolor: ^2.0.6
   device_preview: ^1.0.0
+  geocoding:
+  geolocator:
 
 dev_dependencies:
   flutter_test:
