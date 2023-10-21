@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(BookLibraryApp());
+}
+
+class BookLibraryApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BookListScreen(),
+    );
+  }
+}
+
+class BookListScreen extends StatefulWidget {
+  @override
+  _BookListScreenState createState() => _BookListScreenState();
+}
+
+class _BookListScreenState extends State<BookListScreen> {
+  List<Book> books = [
+    Book("Book 1", "Author 1"),
+    Book("Book 2", "Author 2"),
+    Book("Book 3", "Author 3"),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Book Library'),
+      ),
+      body: ListView.builder(
+        itemCount: books.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(books[index].title),
+            subtitle: Text(books[index].author),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class Book {
+  final String title;
+  final String author;
+
+  Book(this.title, this.author);
+}
